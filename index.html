@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header id="header-custom" class="container-fluid text-center text-white bg-dark py-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <!-- left side columns -->
+            <div id="search-col" class="col-12 col-md-3">
+                <!-- city search form -->
+                <form class="search-form mb-3 g-3 p-2">
+                    <label for="city-search" class="form-label">Search for a City: </label>
+                    <input class="form-control" type="text" placeholder="San Diego" readonly id="city-search">
+                    <button type="submit" class="btn btn-primary btn-block mt-2">Search</button>
+                </form>
+                <hr size="2" width="100%" color="black">
+                <!-- city search history with recall -->
+                <div id="search-history" class="hide">
+                    <ul class="p-2">
+                        <li class="btn btn-secondary btn-block">Austin</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- right side columns -->
+            <div class="col-12 col-md-9">
+                <div class="row hide">
+                    <!-- current city conditions -->
+                    <div class="col card bg-color-light p-3 ">
+                        <div class="card-body">
+                            <!-- bold current city with date and current weather icon -->
+                            <h3>
+                                <span id="current-city" class="card-title"></span>
+                                <!-- grab associated date? -->
+                            </h3>
+                            <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+                            <div class="row"></div>
+                            <div class="col-12 col-md-9 card-body">
+                                <p class="card-text">Temp: <span id="current-temp"></span> &deg;F</p>
+                                <p class="card-text">Wind: <span id="wind"></span> MPH</p>
+                                <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                                <p class="card-text">UV Index: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- current city 5-day forecast -->
+                    <div class="col card bg-color-light text-dark">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="card-title">5-Day Forecast: </h4>
+                            </div>
+                            <div class="row">
+                                <!-- city forecast day 1 -->
+                                <div class="col day-1 bg-primary text-light">
+                                    <p class="card-text fw-bold"><span id="date-1"></span></p>
+                                        <div id="icon-1"><img id="wicon" src="" alt="Weather icon"></div>
+                                    <p class="card-text">Temp: <span id="current-temp-1"></span> &deg;F</p>
+                                    <p class="card-text">Wind: <span id="wind-1"></span> MPH</p>
+                                    <p class="card-text">Humidity: <span id="humidity-1"></span>%</p>
+                                </div>
+                                <!-- city forecast day 2 -->
+                                <div class="col day-2 bg-primary text-light">
+                                    <p class="card-text fw-bold"><span id="date-2"></span></p>
+                                        <div id="icon-2"><img id="wicon" src="" alt="Weather icon"></div>
+                                    <p class="card-text">Temp: <span id="current-temp-2"></span> &deg;F</p>
+                                    <p class="card-text">Wind: <span id="wind-2"></span> MPH</p>
+                                    <p class="card-text">Humidity: <span id="humidity-2"></span>%</p>
+                                </div>
+                                <!-- city forecast day 3 -->
+                                <div class="col day-3 bg-primary text-light">
+                                    <p class="card-text fw-bold"><span id="date-3"></span></p>
+                                        <div id="icon-3"><img id="wicon" src="" alt="Weather icon"></div>
+                                    <p class="card-text">Temp: <span id="current-temp-3"></span> &deg;F</p>
+                                    <p class="card-text">Wind: <span id="wind-3"></span> MPH</p>
+                                    <p class="card-text">Humidity: <span id="humidity-3"></span>%</p>
+                                </div>
+                                <!-- city forecast day 4 -->
+                                <div class="col day-4 bg-primary text-light">
+                                    <p class="card-text fw-bold"><span id="date-4"></span></p>
+                                        <div id="ico-4"><img id="wicon" src="" alt="Weather icon"></div>
+                                    <p class="card-text">Temp: <span id="current-temp-4"></span> &deg;F</p>
+                                    <p class="card-text">Wind: <span id="wind-4"></span> MPH</p>
+                                    <p class="card-text">Humidity: <span id="humidity-4"></span>%</p>
+                                </div>
+                                <!-- city forecast day 5 -->
+                                <div class="col day-5 bg-primary text-light">
+                                    <p class="card-text fw-bold"><span id="date-5"></span></p>
+                                        <div id="icon-5"><img id="wicon" src="" alt="Weather icon"></div>
+                                    <p class="card-text">Temp: <span id="current-temp-5"></span> &deg;F</p>
+                                    <p class="card-text">Wind: <span id="wind-5"></span> MPH</p>
+                                    <p class="card-text">Humidity: <span id="humidity-5"></span>%</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
