@@ -13,3 +13,11 @@
   font-size: larger;
   font-weight: bolder;
 }
+#five-day {
+  display: flex;
+  align-content: space-between;
+}
+
+#card-child {
+  display: flex;
+}
