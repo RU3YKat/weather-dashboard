@@ -8,16 +8,3 @@
     rgba(0, 212, 255, 1) 100%
   ) !important;
 }
-
-.form-label {
-  font-size: larger;
-  font-weight: bolder;
-}
-#five-day {
-  display: flex;
-  align-content: space-between;
-}
-
-#card-child {
-  display: flex;
-}
