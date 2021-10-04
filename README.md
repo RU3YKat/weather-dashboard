@@ -39,4 +39,4 @@ Project uses:
 ## Development
 
 Kellie Redondo, Full Stack Developer
-aka a href="https://github.com/RU3YKat">RU3YKat on Github</a>
+aka<a> href="https://github.com/RU3YKat">RU3YKat on Github</a>
