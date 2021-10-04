@@ -16,6 +16,10 @@ var formSubmitHandler = function(event) {
     } else {
         alert("Please enter a US city name.")
     };
+    // use city to save search in localStorage
+    // saveCitySearch();
+    // use city to apply to past search buttons in left column
+    // pastCitySearch();
 };
 
 var getCurrentWeather = function(city) {
@@ -32,6 +36,10 @@ var getCurrentWeather = function(city) {
     })
 }
 
-var getTimeMachine = fucntion
+var getTimeMachine = function(city) {
+    var getLatLong = function(city) {
+        
+    }
+}
 
 searchFormEl.addEventListener("submit", formSubmitHandler);
