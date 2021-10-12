@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:,">
     <title>Weather Dashboard</title>
 </head>
 <body>
@@ -39,15 +40,15 @@
                             <!-- bold current city with date and current weather icon -->
                             <h3>
                                 <span id="current-city" class="card-title"></span>
+                                <img id="now-wicon" src="" alt="Weather icon" />
                                 <!-- grab associated date? -->
                             </h3>
-                            <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
                             <div class="row"></div>
                             <div class="col-12 col-md-9 card-body">
                                 <p class="card-text">Temp: <span id="current-temp"></span> &deg;F</p>
                                 <p class="card-text">Wind: <span id="wind"></span> MPH</p>
                                 <p class="card-text">Humidity: <span id="humidity"></span>%</p>
-                                <p class="card-text">UV Index: </p>
+                                <p class="card-text">UV Index: <span id="uv-index"></span></p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +65,7 @@
                                     <div class="card col-12 col-md-2 day-1 bg-primary text-light mr-3 mb-3">
                                         <div class="card-body">
                                             <p class="card-text fw-bold"><span id="date-1"></span></p>
-                                                <div id="icon-1"><img id="wicon" src="" alt="Weather icon"></div>
+                                                <div id="icon-1"><img id="day-1wicon" src="" alt="Weather icon"></div>
                                             <p class="card-text">Temp: <span id="current-temp-1"></span> &deg;F</p>
                                             <p class="card-text">Wind: <span id="wind-1"></span> MPH</p>
                                             <p class="card-text">Humidity: <span id="humidity-1"></span>%</p>
@@ -74,7 +75,7 @@
                                     <div class="card col-12 col-md-2 day-2 bg-primary text-light mr-3 mb-3">
                                         <div class="card-body">
                                             <p class="card-text fw-bold"><span id="date-2"></span></p>
-                                                <div id="icon-2"><img id="wicon" src="" alt="Weather icon"></div>
+                                                <div id="icon-2"><img id="day-2wicon" src="" alt="Weather icon"></div>
                                             <p class="card-text">Temp: <span id="current-temp-2"></span> &deg;F</p>
                                             <p class="card-text">Wind: <span id="wind-2"></span> MPH</p>
                                             <p class="card-text">Humidity: <span id="humidity-2"></span>%</p>
@@ -84,7 +85,7 @@
                                     <div class="card col-12 col-md-2 day-3 bg-primary text-light mr-3 mb-3">
                                         <div class="card-body">
                                             <p class="card-text fw-bold"><span id="date-3"></span></p>
-                                                <div id="icon-3"><img id="wicon" src="" alt="Weather icon"></div>
+                                                <div id="icon-3"><img id="day-3wicon" src="" alt="Weather icon"></div>
                                             <p class="card-text">Temp: <span id="current-temp-3"></span> &deg;F</p>
                                             <p class="card-text">Wind: <span id="wind-3"></span> MPH</p>
                                             <p class="card-text">Humidity: <span id="humidity-3"></span>%</p>
@@ -94,7 +95,7 @@
                                     <div class="card col-12 col-md-2 day-4 bg-primary text-light mr-3 mb-3">
                                         <div class="card-body">
                                             <p class="card-text fw-bold"><span id="date-4"></span></p>
-                                                <div id="ico-4"><img id="wicon" src="" alt="Weather icon"></div>
+                                                <div id="icon-4"><img id="day-4wicon" src="" alt="Weather icon"></div>
                                             <p class="card-text">Temp: <span id="current-temp-4"></span> &deg;F</p>
                                             <p class="card-text">Wind: <span id="wind-4"></span> MPH</p>
                                             <p class="card-text">Humidity: <span id="humidity-4"></span>%</p>
@@ -104,7 +105,7 @@
                                     <div class="card col-12 col-md-2 day-5 bg-primary text-light mb-3">
                                         <div class="card-body">
                                             <p class="card-text fw-bold"><span id="date-5"></span></p>
-                                                <div id="icon-5"><img id="wicon" src="" alt="Weather icon"></div>
+                                                <div id="icon-5"><img id="day-5wicon" src="" alt="Weather icon"></div>
                                             <p class="card-text">Temp: <span id="current-temp-5"></span> &deg;F</p>
                                             <p class="card-text">Wind: <span id="wind-5"></span> MPH</p>
                                             <p class="card-text">Humidity: <span id="humidity-5"></span>%</p>
