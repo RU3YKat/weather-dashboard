@@ -25,90 +25,93 @@
                 </form>
                 <hr size="2" width="100%" color="black">
                 <!-- city search history with recall -->
-                <div id="search-history" class="hide">
+                <div id="search-history">
                     <ul class="p-2">
                         <li class="btn btn-secondary btn-block">Austin</li>
                     </ul>
                 </div>
             </div>
             <!-- right side columns -->
-            <div class="col-12 col-md-9">
-                <div class="row hide">
-                    <!-- current city conditions -->
-                    <div class="col card bg-color-light my-3 mx-4 border border-dark border-5">
-                        <div class="card-body">
-                            <!-- bold current city with date and current weather icon -->
-                            <h3>
-                                <span id="current-city" class="card-title"></span>
-                                <img id="now-wicon" src="" alt="Weather icon" />
-                                <!-- grab associated date? -->
-                            </h3>
-                            <div class="row"></div>
-                            <div class="col-12 col-md-9 card-body">
-                                <p class="card-text">Temp: <span id="current-temp"></span> &deg;F</p>
-                                <p class="card-text">Wind: <span id="wind"></span> MPH</p>
-                                <p class="card-text">Humidity: <span id="humidity"></span>%</p>
-                                <p class="card-text">UV Index: <span id="uv-index"></span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-100"></div>
-                        <!-- current city 5-day forecast -->
-                        <div class="col card bg-color-light text-dark border-0">
-                            <div class="container">
-                                <div class="row px-2">
-                                    <h4 class="card-title">5-Day Forecast: </h4>
+            <div class="col-12 col-md-9" >
+                <div id="hide" class="d-none">
+                        <div class="row" >
+                            <!-- current city conditions -->
+                            <div class="col card bg-color-light my-3 mx-4 border border-dark border-5">
+                                <div class="card-body">
+                                    <!-- bold current city with date and current weather icon -->
+                                    <h3>
+                                        <span id="current-city" class="card-title"></span>
+                                        <img id="now-wicon" src="" alt="Weather icon" />
+                                        <!-- grab associated date? -->
+                                    </h3>
+                                    <div class="row"></div>
+                                    <div class="col-12 col-md-9 card-body">
+                                        <p class="card-text">Temp: <span id="current-temp"></span> &deg;F</p>
+                                        <p class="card-text">Wind: <span id="wind"></span> MPH</p>
+                                        <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                                        <p class="card-text">UV Index: <span id="uv-index"></span></p>
+                                    </div>
                                 </div>
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <!-- city forecast day 1 -->
-                                    <div class="card col-12 col-md-2 day-1 bg-primary text-light mr-3 mb-3">
-                                        <div class="card-body">
-                                            <p class="card-text fw-bold"><span id="date-1"></span></p>
-                                                <div id="icon-1"><img id="day-1wicon" src="" alt="Weather icon"></div>
-                                            <p class="card-text">Temp: <span id="current-temp-1"></span> &deg;F</p>
-                                            <p class="card-text">Wind: <span id="wind-1"></span> MPH</p>
-                                            <p class="card-text">Humidity: <span id="humidity-1"></span>%</p>
+                            </div>
+                            <div class="w-100"></div>
+                                <!-- current city 5-day forecast -->
+                                <div class="col card bg-color-light text-dark border-0">
+                                    <div class="container">
+                                        <div class="row px-2">
+                                            <h4 class="card-title">5-Day Forecast: </h4>
                                         </div>
-                                    </div>
-                                    <!-- city forecast day 2 -->
-                                    <div class="card col-12 col-md-2 day-2 bg-primary text-light mr-3 mb-3">
-                                        <div class="card-body">
-                                            <p class="card-text fw-bold"><span id="date-2"></span></p>
-                                                <div id="icon-2"><img id="day-2wicon" src="" alt="Weather icon"></div>
-                                            <p class="card-text">Temp: <span id="current-temp-2"></span> &deg;F</p>
-                                            <p class="card-text">Wind: <span id="wind-2"></span> MPH</p>
-                                            <p class="card-text">Humidity: <span id="humidity-2"></span>%</p>
-                                        </div>
-                                    </div>
-                                    <!-- city forecast day 3 -->
-                                    <div class="card col-12 col-md-2 day-3 bg-primary text-light mr-3 mb-3">
-                                        <div class="card-body">
-                                            <p class="card-text fw-bold"><span id="date-3"></span></p>
-                                                <div id="icon-3"><img id="day-3wicon" src="" alt="Weather icon"></div>
-                                            <p class="card-text">Temp: <span id="current-temp-3"></span> &deg;F</p>
-                                            <p class="card-text">Wind: <span id="wind-3"></span> MPH</p>
-                                            <p class="card-text">Humidity: <span id="humidity-3"></span>%</p>
-                                        </div>
-                                    </div>
-                                    <!-- city forecast day 4 -->
-                                    <div class="card col-12 col-md-2 day-4 bg-primary text-light mr-3 mb-3">
-                                        <div class="card-body">
-                                            <p class="card-text fw-bold"><span id="date-4"></span></p>
-                                                <div id="icon-4"><img id="day-4wicon" src="" alt="Weather icon"></div>
-                                            <p class="card-text">Temp: <span id="current-temp-4"></span> &deg;F</p>
-                                            <p class="card-text">Wind: <span id="wind-4"></span> MPH</p>
-                                            <p class="card-text">Humidity: <span id="humidity-4"></span>%</p>
-                                        </div>
-                                    </div>
-                                    <!-- city forecast day 5 -->
-                                    <div class="card col-12 col-md-2 day-5 bg-primary text-light mb-3">
-                                        <div class="card-body">
-                                            <p class="card-text fw-bold"><span id="date-5"></span></p>
-                                                <div id="icon-5"><img id="day-5wicon" src="" alt="Weather icon"></div>
-                                            <p class="card-text">Temp: <span id="current-temp-5"></span> &deg;F</p>
-                                            <p class="card-text">Wind: <span id="wind-5"></span> MPH</p>
-                                            <p class="card-text">Humidity: <span id="humidity-5"></span>%</p>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <!-- city forecast day 1 -->
+                                            <div class="card col-12 col-md-2 day-1 bg-primary text-light mr-3 mb-3">
+                                                <div class="card-body">
+                                                    <p class="card-text fw-bold"><span id="date-1"></span></p>
+                                                        <div id="icon-1"><img id="day-1wicon" src="" alt="Weather icon"></div>
+                                                    <p class="card-text">Temp: <span id="current-temp-1"></span> &deg;F</p>
+                                                    <p class="card-text">Wind: <span id="wind-1"></span> MPH</p>
+                                                    <p class="card-text">Humidity: <span id="humidity-1"></span>%</p>
+                                                </div>
+                                            </div>
+                                            <!-- city forecast day 2 -->
+                                            <div class="card col-12 col-md-2 day-2 bg-primary text-light mr-3 mb-3">
+                                                <div class="card-body">
+                                                    <p class="card-text fw-bold"><span id="date-2"></span></p>
+                                                        <div id="icon-2"><img id="day-2wicon" src="" alt="Weather icon"></div>
+                                                    <p class="card-text">Temp: <span id="current-temp-2"></span> &deg;F</p>
+                                                    <p class="card-text">Wind: <span id="wind-2"></span> MPH</p>
+                                                    <p class="card-text">Humidity: <span id="humidity-2"></span>%</p>
+                                                </div>
+                                            </div>
+                                            <!-- city forecast day 3 -->
+                                            <div class="card col-12 col-md-2 day-3 bg-primary text-light mr-3 mb-3">
+                                                <div class="card-body">
+                                                    <p class="card-text fw-bold"><span id="date-3"></span></p>
+                                                        <div id="icon-3"><img id="day-3wicon" src="" alt="Weather icon"></div>
+                                                    <p class="card-text">Temp: <span id="current-temp-3"></span> &deg;F</p>
+                                                    <p class="card-text">Wind: <span id="wind-3"></span> MPH</p>
+                                                    <p class="card-text">Humidity: <span id="humidity-3"></span>%</p>
+                                                </div>
+                                            </div>
+                                            <!-- city forecast day 4 -->
+                                            <div class="card col-12 col-md-2 day-4 bg-primary text-light mr-3 mb-3">
+                                                <div class="card-body">
+                                                    <p class="card-text fw-bold"><span id="date-4"></span></p>
+                                                        <div id="icon-4"><img id="day-4wicon" src="" alt="Weather icon"></div>
+                                                    <p class="card-text">Temp: <span id="current-temp-4"></span> &deg;F</p>
+                                                    <p class="card-text">Wind: <span id="wind-4"></span> MPH</p>
+                                                    <p class="card-text">Humidity: <span id="humidity-4"></span>%</p>
+                                                </div>
+                                            </div>
+                                            <!-- city forecast day 5 -->
+                                            <div class="card col-12 col-md-2 day-5 bg-primary text-light mb-3">
+                                                <div class="card-body">
+                                                    <p class="card-text fw-bold"><span id="date-5"></span></p>
+                                                        <div id="icon-5"><img id="day-5wicon" src="" alt="Weather icon"></div>
+                                                    <p class="card-text">Temp: <span id="current-temp-5"></span> &deg;F</p>
+                                                    <p class="card-text">Wind: <span id="wind-5"></span> MPH</p>
+                                                    <p class="card-text">Humidity: <span id="humidity-5"></span>%</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +120,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
